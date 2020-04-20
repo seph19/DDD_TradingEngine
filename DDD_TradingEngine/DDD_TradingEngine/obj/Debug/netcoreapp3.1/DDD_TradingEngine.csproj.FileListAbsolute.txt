@@ -119,4 +119,3 @@ C:\Users\josep\source\repos\DDD_TradingEngine\DDD_TradingEngine\bin\Debug\netcor
 C:\Users\josep\source\repos\DDD_TradingEngine\DDD_TradingEngine\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
 C:\Users\josep\source\repos\DDD_TradingEngine\DDD_TradingEngine\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\josep\source\repos\DDD_TradingEngine\DDD_TradingEngine\obj\Debug\netcoreapp3.1\DDD_TradingEngine.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\josep\source\repos\DDD_TradingEngine\DDD_TradingEngine\obj\Debug\netcoreapp3.1\DDD_TradingEngine.csprojAssemblyReference.cache

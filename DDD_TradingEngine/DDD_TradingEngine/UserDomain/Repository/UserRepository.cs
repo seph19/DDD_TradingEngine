@@ -67,15 +67,22 @@ namespace DDD_TradingEngine.UserDomain.Repository
 
         public bool? ExchangeMoney(ExchangeMoney exhangeMoney,int userId)
         {
-            var user = _userDataManager.GetUserBalances(userId);
-
             var fromCurrency = _userDataManager.GetCurrency(exhangeMoney.FromCurrencyId);
             var toCurrency = _userDataManager.GetCurrency(exhangeMoney.ToCurrencyId);
 
+            var fromCurrencyUser = _userDataManager.GetUserBalance(userId, fromCurrency.CurrencyId);
+            var toCurrencyUser = _userDataManager.GetUserBalance(userId, toCurrency.CurrencyId);
+
+            var moneyCharge = new Money(fromCurrency, exhangeMoney.Amount);
+            var moneyAdd = new Money(fromCurrency, exhangeMoney.Amount);
+
+            fromCurrencyUser.Balance.ChargeMoney(moneyCharge);
+            _userDataManager.UpdateUserBalance(fromCurrencyUser);
+
             var exchange = new Money(fromCurrency, exhangeMoney.Amount);
 
-            var result = user.Balance.ExchangeMoney(exchange, toCurrency);
-            _userDataManager.UpdateUserBalance(user);
+            var result = toCurrencyUser.Balance.ExchangeMoney(exchange, toCurrency);
+            _userDataManager.UpdateUserBalance(toCurrencyUser);
 
             return result;
         }

@@ -75,8 +75,7 @@ namespace DDD_TradingEngine.MoneyDomain.Model
             try
             {
                 decimal ratioBetweenCurrencies = Math.Round(money.Currency.Ratio / toCurrency.Ratio, 2);
-                var result = AddMoneyBalance(new Money(toCurrency, (decimal)Math.Round(money.Amount * ratioBetweenCurrencies * 100) / 100));
-                ChargeMoney(money);
+                var result = AddMoney(new Money(toCurrency, (decimal)Math.Round(money.Amount * ratioBetweenCurrencies * 100) / 100));
 
                 return result;
             }

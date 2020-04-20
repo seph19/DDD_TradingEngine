@@ -97,7 +97,9 @@ namespace UnitTest
             var fixture = new Fixture();
             var userId = 1;
             var currencyId = 1;
+            var currencyId2 = 2;
 
+            var currencyResult1 = new Currency(currencyId, "USD", (decimal)1);
             var currencyResult = new Currency(currencyId, "EUR", (decimal)2);
             var balance = new Balance();
             balance.AddMoney(new Money(currencyResult, 10));
@@ -105,8 +107,11 @@ namespace UnitTest
 
             var param = new ExchangeMoney() {FromCurrencyId = currencyId, ToCurrencyId = 2, Amount = 10};
 
-            var user = _userDataManager.Setup(x => x.GetUserBalances(userId)).Returns(dataResult);
-            var currency = _userDataManager.Setup(x => x.GetCurrency(currencyId)).Returns(currencyResult);
+            var user = _userDataManager.Setup(x => x.GetUserBalance(userId, currencyId)).Returns(dataResult);
+            _userDataManager.Setup(x => x.GetCurrency(currencyId)).Returns(currencyResult1);
+            _userDataManager.Setup(x => x.GetCurrency(currencyId2)).Returns(currencyResult);
+
+
             _userDataManager.Setup(x => x.UpdateUserBalance(dataResult));
 
             var result = userRepository.ExchangeMoney(param, userId);
