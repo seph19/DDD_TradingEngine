@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD_TradingEngine", "DDD_TradingEngine\DDD_TradingEngine.csproj", "{029E5AF1-E861-42B5-826B-1DB5338ECE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{49544E39-A1C7-4502-995F-835256B5F626}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{029E5AF1-E861-42B5-826B-1DB5338ECE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029E5AF1-E861-42B5-826B-1DB5338ECE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029E5AF1-E861-42B5-826B-1DB5338ECE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029E5AF1-E861-42B5-826B-1DB5338ECE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49544E39-A1C7-4502-995F-835256B5F626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49544E39-A1C7-4502-995F-835256B5F626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49544E39-A1C7-4502-995F-835256B5F626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49544E39-A1C7-4502-995F-835256B5F626}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C8A20DC-79DC-4797-81F2-9335EF3EE922}
+	EndGlobalSection
+EndGlobal
